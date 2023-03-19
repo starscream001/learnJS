@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт обучение JS</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+	function askWords(name){
+		while(name.length != 0){
+		var i = parseInt(Math.random() * name.length);
+		var userTranslate = prompt("Как переводится слово " + name[i][0] + " ?");
+			if(userTranslate == name[i][1]){
+		alert("Правильно");
+		name.splice(i, 1);
+	} 		else {
+		alert("Правильный ответ: " + name[i][1]);
+	}
+	}
+	}
+	var numberwords = [
+		["one", "один"],
+		["two", "два"],
+		["zero", "ноль"],
+		["three", "три"],
+		["four", "четыре"],
+		["five", "пять"],
+		["six", "шесть"],
+		["seven", "семь"],
+		["eight", "восемь"],
+		["nine", "девять"],
+		["ten", "десять"],
+	]
+	
+	
+	var words = [
+		["food", "еда"],
+		["bike", "велосипед"],
+		["apple", "яблоко"],
+		["do", "делать"],
+		["mean", "иметь в виду"],
+	]
+	
+	askWords(numberwords);
+	
+ alert("Молодец! Все слова выучены! Переходим на следующий уровень!");
+ 
+ 	
+	askWords(words);
+	
+ alert("Молодец! Все слова выучены!");
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="#">Учим английский</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Учим английский</h1>
+
+			<div class="box">
+				<a href="#" onclick="askWords(name);"> Начать</a>
+			</div>
+
+        </div>
+    </div>
+</div>
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Ilya Manik
+<div>
+
+
+</body>
+</html>
